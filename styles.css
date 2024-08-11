@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-container.simple {
+    background-color: #fff;
+    color: #333;
+}
+
+.form-container.highContrast {
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="pais"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cambiarEstilo {
+    background-color: #008CBA;
+    color: white;
+    margin-top: 10px;
+}
