@@ -37,8 +37,14 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
 
 function mostrarError(campo, mensaje) {//show mensaje de error
     const errorElement = document.getElementById(campo + '-error');
-    errorElement.textContent = mensaje;
-    errorElement.style.display = 'block';
+
+    if (errorElement){
+        errorElement.textContent = mensaje;
+        //para el lector de pantalla
+        statusMessage.textContent = `Error en el campo ${campo}: ${mensaje}`;
+        //muestro el mensaje de error visualmente
+        errorElement.style.display = 'block';
+    }
 }
 function ocultarError(campo) {//hide mensaje de error
     const errorElement = document.getElementById(campo + '-error');
@@ -46,6 +52,11 @@ function ocultarError(campo) {//hide mensaje de error
 }
 
 function mostrarConfirmacion(){//mensaje confirmando el envio del formulario
+    //para el lector de pantalla
+    const statusMessage = document.getElementById('statusMessage');
+    statusMessage.textContent = 'El formulario se envió correctamente.';
+    
+    //muestro visualmente la confirmacion
     const confirmacion = document.createElement('div');
     confirmacion.className = 'confirmacion';
     confirmacion.textContent = 'El formulario se envió correctamente.';
