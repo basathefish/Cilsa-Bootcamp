@@ -53,3 +53,25 @@ button[type="submit"] {
     color: white;
     margin-top: 10px;
 }
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.confirmacion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
