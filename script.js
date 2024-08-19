@@ -4,6 +4,9 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
     //agarro los campos
     const nombre = document.getElementById('nombre');
     const apellido = document.getElementById('apellido');
+    const fechaSeleccionada = new Date(
+        document.getElementById('fecha').value
+    )
 
     //regex para caracteres validos
     const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
@@ -24,6 +27,12 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
         ocultarError('apellido');
     }
 
+    const hoy = new Date();
+    //valido que la fecha sea posterior a la fecha actual
+    if (fechaSeleccionada >= hoy){
+        isValid = false;
+        mostrarError('fecha', 'La fecha debe ser previa a la fecha actual.')
+    }
     
     if (!isValid) {//si no es valido, no se envia
         event.preventDefault();
