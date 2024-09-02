@@ -88,5 +88,4 @@ document.getElementById('cambiarEstilo').addEventListener('click', function() {
         formContainer.classList.remove('highContrast');
         formContainer.classList.add('simple');
     }
-
 });
